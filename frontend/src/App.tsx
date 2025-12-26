@@ -1,12 +1,18 @@
 import ShoppingOptimizer from './components/ShoppingOptimizer'
 import SafetyRouter from './components/SafetyRouter'
+import SafetyMap from './components/SafetyMap'
 import StoreInfo from './components/StoreInfo'
 import FeedbackForm from './components/FeedbackForm'
+import LiveStatusBar from './components/LiveStatusBar'
+import PerformanceDashboard from './components/PerformanceDashboard'
 import './App.css'
 
 function App() {
   return (
     <div className="app">
+      <LiveStatusBar />
+      <PerformanceDashboard />
+      
       <header className="app-header">
         <h1>🏪 Shahapur Sahayak</h1>
         <p className="app-subtitle">Your Safety & Economy Guide for Shahapur</p>
@@ -20,6 +26,10 @@ function App() {
           
           <div className="tool-section">
             <SafetyRouter />
+          </div>
+          
+          <div className="tool-section">
+            <SafetyMap />
           </div>
           
           <div className="tool-section">

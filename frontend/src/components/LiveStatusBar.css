@@ -1,0 +1,241 @@
+.live-status-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.live-status-bar.night-mode {
+  background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+  border-bottom-color: rgba(255, 255, 255, 0.2);
+}
+
+.live-status-bar.day-mode {
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+  border-bottom-color: rgba(255, 255, 255, 0.2);
+}
+
+.status-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1400px;
+  margin: 0 auto;
+  gap: 1rem;
+}
+
+.status-marquee {
+  flex: 1;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+
+.status-text {
+  display: inline-block;
+  animation: marquee-continuous 25s linear infinite;
+  padding-left: 100%;
+  will-change: transform;
+}
+
+@keyframes marquee-continuous {
+  0% {
+    transform: translate3d(100%, 0, 0);
+  }
+  100% {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+.status-indicators {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+
+.live-indicator {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 0.3rem 0.6rem;
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.pulse-dot {
+  width: 6px;
+  height: 6px;
+  background: #ffffff;
+  border-radius: 50%;
+  animation: pulse-continuous 1.5s ease-in-out infinite;
+  box-shadow: 0 0 4px rgba(255, 255, 255, 0.8);
+}
+
+@keyframes pulse-continuous {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.2);
+  }
+}
+
+.status-time {
+  flex-shrink: 0;
+  font-size: 0.75rem;
+  font-weight: 600;
+  opacity: 0.95;
+  background: rgba(255, 255, 255, 0.12);
+  padding: 0.35rem 0.8rem;
+  border-radius: 12px;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  font-family: 'Courier New', monospace;
+  letter-spacing: 0.5px;
+  min-width: 85px;
+  text-align: center;
+}
+
+/* Continuous marquee - never stops */
+.live-status-bar:hover .status-text {
+  animation-play-state: running; /* Keep running even on hover */
+}
+
+/* Alternative static version for users who prefer no animation */
+@media (prefers-reduced-motion: reduce) {
+  .status-text {
+    animation: none;
+    padding-left: 0;
+    white-space: normal;
+  }
+  
+  .status-marquee {
+    overflow: visible;
+  }
+  
+  .pulse-dot {
+    animation: none;
+    opacity: 1;
+  }
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .live-status-bar {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+  }
+  
+  .status-content {
+    gap: 0.5rem;
+  }
+  
+  .status-indicators {
+    gap: 0.5rem;
+  }
+  
+  .live-indicator {
+    font-size: 0.65rem;
+    padding: 0.25rem 0.5rem;
+  }
+  
+  .pulse-dot {
+    width: 5px;
+    height: 5px;
+  }
+  
+  .status-time {
+    font-size: 0.65rem;
+    padding: 0.25rem 0.6rem;
+    min-width: 75px;
+  }
+  
+  /* Faster continuous marquee on mobile */
+  .status-text {
+    animation-duration: 20s;
+  }
+}
+
+@media (max-width: 480px) {
+  .live-status-bar {
+    padding: 0.4rem 0.75rem;
+    font-size: 0.75rem;
+  }
+  
+  .status-content {
+    gap: 0.4rem;
+  }
+  
+  .status-indicators {
+    gap: 0.4rem;
+  }
+  
+  .live-indicator {
+    font-size: 0.6rem;
+    padding: 0.2rem 0.4rem;
+  }
+  
+  .pulse-dot {
+    width: 4px;
+    height: 4px;
+  }
+  
+  .status-time {
+    font-size: 0.6rem;
+    padding: 0.2rem 0.5rem;
+    min-width: 70px;
+  }
+  
+  /* Even faster continuous animation on small screens */
+  .status-text {
+    animation-duration: 18s;
+  }
+}
+
+/* High contrast mode for accessibility */
+@media (prefers-contrast: high) {
+  .live-status-bar.night-mode {
+    background: #dc2626;
+    border-bottom: 2px solid #ffffff;
+  }
+  
+  .live-status-bar.day-mode {
+    background: #059669;
+    border-bottom: 2px solid #ffffff;
+  }
+  
+  .status-time {
+    background: rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .live-status-bar {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  }
+}
+
+/* Print styles - hide status bar when printing */
+@media print {
+  .live-status-bar {
+    display: none;
+  }
+}

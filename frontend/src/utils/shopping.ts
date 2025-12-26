@@ -3,8 +3,21 @@
 import type { ShoppingItem, OptimizationResult } from '../types';
 import { BULK_REASONING, DAILY_REASONING } from '../constants';
 
+// Cache for categorization results to avoid recalculating for the same items
+const categorizationCache = new Map<string, ShoppingItem>();
+
+// Memoized categorization function with caching
 export function categorizeShoppingItem(item: string): ShoppingItem {
-  const normalizedItem = item.toLowerCase().trim();
+  // Use cache to avoid recalculating the same item
+  const cacheKey = item.toLowerCase().trim();
+  if (categorizationCache.has(cacheKey)) {
+    const cached = categorizationCache.get(cacheKey)!;
+    // Return a new object with the original item name to preserve case
+    return { ...cached, name: item };
+  }
+
+  const normalizedItem = cacheKey;
+  let result: ShoppingItem;
   
   // Check for bulk items with specific quantity rules
   if (normalizedItem.includes('oil')) {
@@ -13,11 +26,13 @@ export function categorizeShoppingItem(item: string): ShoppingItem {
     if (hasLargeQuantity) {
       const match = normalizedItem.match(/(\d+)\s*(l|liter|litre)/i);
       if (match && parseInt(match[1]) >= 2) {
-        return {
+        result = {
           name: item,
           category: 'bulk',
           reason: BULK_REASONING
         };
+        categorizationCache.set(cacheKey, { ...result, name: cacheKey });
+        return result;
       }
     }
     // If no quantity specified or small quantity, default to daily
@@ -29,11 +44,13 @@ export function categorizeShoppingItem(item: string): ShoppingItem {
     if (hasLargeQuantity) {
       const match = normalizedItem.match(/(\d+)\s*(kg|kilo)/i);
       if (match && parseInt(match[1]) >= 2) {
-        return {
+        result = {
           name: item,
           category: 'bulk', 
           reason: BULK_REASONING
         };
+        categorizationCache.set(cacheKey, { ...result, name: cacheKey });
+        return result;
       }
     }
     // If no quantity specified or small quantity, default to daily
@@ -44,20 +61,24 @@ export function categorizeShoppingItem(item: string): ShoppingItem {
   const isBulkItem = bulkKeywords.some(keyword => normalizedItem.includes(keyword));
   
   if (isBulkItem) {
-    return {
+    result = {
       name: item,
       category: 'bulk',
       reason: BULK_REASONING
     };
+    categorizationCache.set(cacheKey, { ...result, name: cacheKey });
+    return result;
   }
   
   // Check for daily items with specific rules
   if (normalizedItem.includes('rice') && (normalizedItem.includes('<2kg') || normalizedItem.includes('loose') || (!normalizedItem.includes('2kg') && !normalizedItem.includes('kg')))) {
-    return {
+    result = {
       name: item,
       category: 'daily',
       reason: DAILY_REASONING
     };
+    categorizationCache.set(cacheKey, { ...result, name: cacheKey });
+    return result;
   }
   
   // Check for other daily items
@@ -65,33 +86,36 @@ export function categorizeShoppingItem(item: string): ShoppingItem {
   const isDailyItem = dailyKeywords.some(keyword => normalizedItem.includes(keyword));
   
   if (isDailyItem) {
-    return {
+    result = {
       name: item,
       category: 'daily',
       reason: DAILY_REASONING
     };
+    categorizationCache.set(cacheKey, { ...result, name: cacheKey });
+    return result;
   }
   
   // Default to daily for unknown items (safer for local economy)
-  return {
+  result = {
     name: item,
     category: 'daily',
     reason: 'Unknown item - supporting local Kirana store for convenience'
   };
+  categorizationCache.set(cacheKey, { ...result, name: cacheKey });
+  return result;
 }
 
-export function optimizeShoppingList(inputText: string): OptimizationResult {
-  if (!inputText || inputText.trim().length === 0) {
-    return {
-      bulkItems: [],
-      dailyItems: []
-    };
+// Cache for parsing results to avoid re-parsing the same input
+const parseCache = new Map<string, string[]>();
+
+// Optimized input parsing with caching
+function parseShoppingInput(inputText: string): string[] {
+  const cacheKey = inputText.trim();
+  if (parseCache.has(cacheKey)) {
+    return parseCache.get(cacheKey)!;
   }
-  
-  // Parse input text into individual items
-  // Handle both comma-separated and newline-separated inputs
-  const normalizedInput = inputText.trim();
-  
+
+  const normalizedInput = cacheKey;
   let items: string[] = [];
   
   // Check if input contains newlines - if so, split by newlines first
@@ -120,12 +144,43 @@ export function optimizeShoppingList(inputText: string): OptimizationResult {
     // Single item
     items = [normalizedInput];
   }
+
+  // Cache the result for future use
+  parseCache.set(cacheKey, items);
   
-  // Categorize each item (preserving duplicates)
+  // Limit cache size to prevent memory leaks
+  if (parseCache.size > 100) {
+    const firstKey = parseCache.keys().next().value;
+    if (firstKey) {
+      parseCache.delete(firstKey);
+    }
+  }
+  
+  return items;
+}
+
+export function optimizeShoppingList(inputText: string): OptimizationResult {
+  if (!inputText || inputText.trim().length === 0) {
+    return {
+      bulkItems: [],
+      dailyItems: []
+    };
+  }
+  
+  // Use optimized parsing with caching
+  const items = parseShoppingInput(inputText);
+  
+  // Categorize each item (preserving duplicates) with caching
   const categorizedItems = items.map(categorizeShoppingItem);
   
   return {
     bulkItems: categorizedItems.filter(item => item.category === 'bulk'),
     dailyItems: categorizedItems.filter(item => item.category === 'daily')
   };
+}
+
+// Utility function to clear caches if needed (for testing or memory management)
+export function clearOptimizationCaches(): void {
+  categorizationCache.clear();
+  parseCache.clear();
 }

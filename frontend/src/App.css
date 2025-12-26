@@ -5,6 +5,12 @@
   flex-direction: column;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   position: relative;
+  padding-top: 3rem; /* Add space for fixed status bar */
+  /* Prevent horizontal scrolling */
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
+  box-sizing: border-box;
 }
 
 .app::before {
@@ -86,6 +92,10 @@
   display: flex;
   flex-direction: column;
   min-height: 500px; /* Set consistent minimum height */
+  /* Prevent horizontal overflow */
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .tool-section::before {
@@ -126,6 +136,10 @@
 
 /* Mobile responsive design */
 @media (max-width: 768px) {
+  .app {
+    padding-top: 2.5rem; /* Smaller status bar on mobile */
+  }
+  
   .app-header {
     padding: 2rem 1rem;
   }
@@ -155,6 +169,10 @@
 
 /* Small mobile devices */
 @media (max-width: 480px) {
+  .app {
+    padding-top: 2.2rem; /* Even smaller status bar on small mobile */
+  }
+  
   .app-header {
     padding: 1.5rem 1rem;
   }
