@@ -3,10 +3,10 @@ import { STORE_INFO } from '../constants';
 import './StoreInfo.css';
 
 const StoreInfo: React.FC = () => {
-  const [selectedStore, setSelectedStore] = useState<'dmart' | 'kirana' | null>(null);
+  const [activeTab, setActiveTab] = useState<'dmart' | 'kirana' | null>(null);
 
-  const handleStoreSelect = (store: 'dmart' | 'kirana') => {
-    setSelectedStore(selectedStore === store ? null : store);
+  const handleTabSelect = (tab: 'dmart' | 'kirana') => {
+    setActiveTab(activeTab === tab ? null : tab);
   };
 
   return (
@@ -14,96 +14,98 @@ const StoreInfo: React.FC = () => {
       <h2>🏪 Store Information</h2>
       <p>Get timings, contact details, and tips for shopping in Shahapur</p>
       
-      <div className="store-buttons">
+      <div className="store-tabs">
         <button 
-          className={`store-button dmart-button ${selectedStore === 'dmart' ? 'active' : ''}`}
-          onClick={() => handleStoreSelect('dmart')}
+          className={`store-tab dmart-tab ${activeTab === 'dmart' ? 'active' : ''}`}
+          onClick={() => handleTabSelect('dmart')}
         >
           <span className="store-icon">🛒</span>
-          D-Mart Info
+          <span className="tab-text">D-Mart Info</span>
         </button>
         
         <button 
-          className={`store-button kirana-button ${selectedStore === 'kirana' ? 'active' : ''}`}
-          onClick={() => handleStoreSelect('kirana')}
+          className={`store-tab kirana-tab ${activeTab === 'kirana' ? 'active' : ''}`}
+          onClick={() => handleTabSelect('kirana')}
         >
           <span className="store-icon">🏪</span>
-          Kirana Info
+          <span className="tab-text">Kirana Info</span>
         </button>
       </div>
 
-      {selectedStore && (
-        <div className={`store-details ${selectedStore}-details`}>
-          <div className="store-card">
-            <h3>{STORE_INFO[selectedStore].name}</h3>
-            
-            <div className="info-grid">
-              <div className="info-item">
-                <span className="info-icon">🕒</span>
-                <div>
-                  <strong>Timings</strong>
-                  <p>{STORE_INFO[selectedStore].timings}</p>
+      <div className="tab-content">
+        {activeTab && (
+          <div className={`store-details ${activeTab}-details`}>
+            <div className="store-card">
+              <h3>{STORE_INFO[activeTab].name}</h3>
+              
+              <div className="info-grid">
+                <div className="info-item">
+                  <span className="info-icon">🕒</span>
+                  <div>
+                    <strong>Timings</strong>
+                    <p>{STORE_INFO[activeTab].timings}</p>
+                  </div>
+                </div>
+                
+                <div className="info-item">
+                  <span className="info-icon">📞</span>
+                  <div>
+                    <strong>Contact</strong>
+                    <p>{STORE_INFO[activeTab].contact}</p>
+                  </div>
+                </div>
+                
+                <div className="info-item">
+                  <span className="info-icon">📍</span>
+                  <div>
+                    <strong>Location</strong>
+                    <p>{STORE_INFO[activeTab].address}</p>
+                  </div>
+                </div>
+                
+                <div className="info-item">
+                  <span className="info-icon">⏰</span>
+                  <div>
+                    <strong>Best Time to Visit</strong>
+                    <p>{STORE_INFO[activeTab].bestTime}</p>
+                  </div>
+                </div>
+                
+                <div className="info-item">
+                  <span className="info-icon">⏱️</span>
+                  <div>
+                    <strong>Average Wait Time</strong>
+                    <p>{STORE_INFO[activeTab].avgWaitTime}</p>
+                  </div>
+                </div>
+                
+                <div className="info-item">
+                  <span className="info-icon">📈</span>
+                  <div>
+                    <strong>Peak Hours</strong>
+                    <p>{STORE_INFO[activeTab].peakHours}</p>
+                  </div>
                 </div>
               </div>
               
-              <div className="info-item">
-                <span className="info-icon">📞</span>
-                <div>
-                  <strong>Contact</strong>
-                  <p>{STORE_INFO[selectedStore].contact}</p>
-                </div>
+              <div className="benefits-section">
+                <h4>✨ Benefits</h4>
+                <ul className="benefits-list">
+                  {STORE_INFO[activeTab].benefits.map((benefit, index) => (
+                    <li key={index}>{benefit}</li>
+                  ))}
+                </ul>
               </div>
-              
-              <div className="info-item">
-                <span className="info-icon">📍</span>
-                <div>
-                  <strong>Location</strong>
-                  <p>{STORE_INFO[selectedStore].address}</p>
-                </div>
-              </div>
-              
-              <div className="info-item">
-                <span className="info-icon">⏰</span>
-                <div>
-                  <strong>Best Time to Visit</strong>
-                  <p>{STORE_INFO[selectedStore].bestTime}</p>
-                </div>
-              </div>
-              
-              <div className="info-item">
-                <span className="info-icon">⏱️</span>
-                <div>
-                  <strong>Average Wait Time</strong>
-                  <p>{STORE_INFO[selectedStore].avgWaitTime}</p>
-                </div>
-              </div>
-              
-              <div className="info-item">
-                <span className="info-icon">📈</span>
-                <div>
-                  <strong>Peak Hours</strong>
-                  <p>{STORE_INFO[selectedStore].peakHours}</p>
-                </div>
-              </div>
-            </div>
-            
-            <div className="benefits-section">
-              <h4>✨ Benefits</h4>
-              <ul className="benefits-list">
-                {STORE_INFO[selectedStore].benefits.map((benefit, index) => (
-                  <li key={index}>{benefit}</li>
-                ))}
-              </ul>
             </div>
           </div>
-        </div>
-      )}
-      
-      {!selectedStore && (
-        <div className="placeholder-message">
-          <p>👆 Select a store type above to view detailed information</p>
-        </div>
-      )}
+        )}
+        
+        {!activeTab && (
+          <div className="placeholder-message">
+            <p>👆 Select a store type above to view detailed information</p>
+          </div>
+        )}
+      </div>
     </div>
   );
 };
