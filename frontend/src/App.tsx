@@ -1,5 +1,4 @@
 import ShoppingOptimizer from './components/ShoppingOptimizer'
-import SafetyRouter from './components/SafetyRouter'
 import SafetyMap from './components/SafetyMap'
 import StoreInfo from './components/StoreInfo'
 import FeedbackForm from './components/FeedbackForm'
@@ -22,10 +21,6 @@ function App() {
         <div className="tools-container">
           <div className="tool-section">
             <ShoppingOptimizer />
-          </div>
-          
-          <div className="tool-section">
-            <SafetyRouter />
           </div>
           
           <div className="tool-section">
