@@ -30,6 +30,18 @@ const DANGER_ZONES = [
     fillOpacity: 0.2,
     weight: 2,
   },
+  {
+    id: 'petrol-pump-cut',
+    position: [19.448, 73.334] as [number, number],
+    radius: 200, // meters
+    name: 'Petrol Pump Cut',
+    description: '⚠️ DANGER: Petrol Pump Cut. No traffic signal.',
+    details: 'No traffic signal - Wait for a clear gap of 200m before crossing.',
+    color: 'red',
+    fillColor: 'red',
+    fillOpacity: 0.2,
+    weight: 2,
+  },
 ];
 
 // Safe route configuration

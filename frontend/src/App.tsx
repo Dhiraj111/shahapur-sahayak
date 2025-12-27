@@ -1,5 +1,6 @@
 import ShoppingOptimizer from './components/ShoppingOptimizer'
 import SafetyMap from './components/SafetyMap'
+import TransportInfo from './components/TransportInfo'
 import StoreInfo from './components/StoreInfo'
 import FeedbackForm from './components/FeedbackForm'
 import LiveStatusBar from './components/LiveStatusBar'
@@ -25,6 +26,10 @@ function App() {
           
           <div className="tool-section">
             <SafetyMap />
+          </div>
+          
+          <div className="tool-section">
+            <TransportInfo />
           </div>
           
           <div className="tool-section">

@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for src/components/ShoppingOptimizer.tsx</title>
+    <title>Code coverage report for src/utils/frameRateMonitor.ts</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../prettify.css" />
     <link rel="stylesheet" href="../../base.css" />
@@ -19,34 +19,34 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../../index.html">All files</a> / <a href="index.html">src/components</a> ShoppingOptimizer.tsx</h1>
+        <h1><a href="../../index.html">All files</a> / <a href="index.html">src/utils</a> frameRateMonitor.ts</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">76.47% </span>
+                <span class="strong">40.68% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>78/102</span>
+                <span class='fraction'>59/145</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">63.46% </span>
+                <span class="strong">17.18% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>33/52</span>
+                <span class='fraction'>11/64</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">90% </span>
+                <span class="strong">37.5% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>18/20</span>
+                <span class='fraction'>15/40</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">75.75% </span>
+                <span class="strong">42.22% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>75/99</span>
+                <span class='fraction'>57/135</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line medium'></div>
+    <div class='status-line low'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -400,34 +400,164 @@
 <a name='L335'></a><a href='#L335'>335</a>
 <a name='L336'></a><a href='#L336'>336</a>
 <a name='L337'></a><a href='#L337'>337</a>
-<a name='L338'></a><a href='#L338'>338</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">2x</span>
+<a name='L338'></a><a href='#L338'>338</a>
+<a name='L339'></a><a href='#L339'>339</a>
+<a name='L340'></a><a href='#L340'>340</a>
+<a name='L341'></a><a href='#L341'>341</a>
+<a name='L342'></a><a href='#L342'>342</a>
+<a name='L343'></a><a href='#L343'>343</a>
+<a name='L344'></a><a href='#L344'>344</a>
+<a name='L345'></a><a href='#L345'>345</a>
+<a name='L346'></a><a href='#L346'>346</a>
+<a name='L347'></a><a href='#L347'>347</a>
+<a name='L348'></a><a href='#L348'>348</a>
+<a name='L349'></a><a href='#L349'>349</a>
+<a name='L350'></a><a href='#L350'>350</a>
+<a name='L351'></a><a href='#L351'>351</a>
+<a name='L352'></a><a href='#L352'>352</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">938x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">469x</span>
+<span class="cline-any cline-yes">469x</span>
+<span class="cline-any cline-yes">469x</span>
+<span class="cline-any cline-yes">469x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">469x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">938x</span>
+<span class="cline-any cline-yes">938x</span>
+<span class="cline-any cline-yes">469x</span>
+<span class="cline-any cline-yes">469x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2655x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2655x</span>
+<span class="cline-any cline-yes">2655x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2655x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2655x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">1637x</span>
-<span class="cline-any cline-yes">1637x</span>
-<span class="cline-any cline-yes">1637x</span>
-<span class="cline-any cline-yes">1637x</span>
-<span class="cline-any cline-yes">1637x</span>
-<span class="cline-any cline-yes">1637x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1637x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1637x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1637x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">469x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">469x</span>
@@ -438,126 +568,142 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">469x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">469x</span>
 <span class="cline-any cline-yes">469x</span>
 <span class="cline-any cline-yes">469x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">469x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1637x</span>
 <span class="cline-any cline-yes">469x</span>
 <span class="cline-any cline-yes">469x</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1637x</span>
-<span class="cline-any cline-yes">1099x</span>
-<span class="cline-any cline-yes">1099x</span>
-<span class="cline-any cline-yes">502x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">597x</span>
-<span class="cline-any cline-yes">604x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">597x</span>
-<span class="cline-any cline-yes">24x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">573x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1637x</span>
-<span class="cline-any cline-yes">369x</span>
-<span class="cline-any cline-yes">369x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">369x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">369x</span>
-<span class="cline-any cline-yes">369x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">369x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">369x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">369x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1637x</span>
-<span class="cline-any cline-yes">630x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">630x</span>
-<span class="cline-any cline-yes">630x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">630x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">630x</span>
+<span class="cline-any cline-yes">469x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">630x</span>
-<span class="cline-any cline-yes">630x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1637x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">369x</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">369x</span>
-<span class="cline-any cline-yes">369x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">369x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">369x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">369x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">369x</span>
-<span class="cline-any cline-yes">369x</span>
-<span class="cline-any cline-yes">369x</span>
-<span class="cline-any cline-yes">369x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">369x</span>
-<span class="cline-any cline-yes">369x</span>
-<span class="cline-any cline-yes">369x</span>
-<span class="cline-any cline-yes">369x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -566,17 +712,16 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1637x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1637x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -586,13 +731,26 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -601,480 +759,364 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">31x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">564x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span></td><td class="text"><pre class="prettyprint lang-js">import React, { useState, useCallback, useMemo, useEffect } from 'react';
-import { optimizeShoppingList } from '../utils/shopping';
-import { PerformanceMonitor, performanceBudget, getOptimizedAnimationConfig } from '../utils/performance';
-import { frameRateMonitor, animationOptimizer } from '../utils/frameRateMonitor';
-import { performanceBudgetManager, performanceChecker } from '../utils/performanceBudgets';
-import type { OptimizationResult } from '../types';
-import CardHeader from './CardHeader';
-import EmptyState from './EmptyState';
-import './ShoppingOptimizer.css';
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span></td><td class="text"><pre class="prettyprint lang-js">// Frame rate monitoring utility for performance tracking
 &nbsp;
-const ShoppingOptimizer: React.FC = () =&gt; {
-  const [inputText, setInputText] = useState&lt;string&gt;('');
-  const [results, setResults] = useState&lt;OptimizationResult | null&gt;(null);
-  const [isProcessing, setIsProcessing] = useState&lt;boolean&gt;(false);
-  const [error, setError] = useState&lt;string&gt;('');
-  const [showResults, setShowResults] = useState&lt;boolean&gt;(false);
-  const [animateItems, setAnimateItems] = useState&lt;boolean&gt;(false);
+export class FrameRateMonitor {
+  private static instance: FrameRateMonitor;
+  private isMonitoring = false;
+  private frameCount = 0;
+  private lastTime = 0;
+  private fps = 60;
+  private fpsHistory: number[] = [];
+  private animationFrameId: number | null = null;
+  private callbacks: ((fps: number) =&gt; void)[] = [];
+  private performanceThreshold = 30; // FPS threshold for performance warnings
 &nbsp;
-  // Get performance monitor instance
-  const performanceMonitor = PerformanceMonitor.getInstance();
-  
-  // Get optimized animation configuration based on device capabilities
-  const animationConfig = useMemo(() =&gt; getOptimizedAnimationConfig(), []);
+  static getInstance(): FrameRateMonitor {
+    if (!FrameRateMonitor.instance) {
+      FrameRateMonitor.instance = new FrameRateMonitor();
+    }
+    return FrameRateMonitor.instance;
+  }
 &nbsp;
-  // Initialize performance monitoring
-  useEffect(() =&gt; {
-    // Start frame rate monitoring
-    frameRateMonitor.startMonitoring();
+  // Start monitoring frame rate
+  startMonitoring(): void {
+    if (this.isMonitoring) return;
     
-    // Start animation optimization
-    animationOptimizer.startOptimization();
+    this.isMonitoring = true;
+    this.frameCount = 0;
+    this.lastTime = performance.now();
+    this.fpsHistory = [];
     
-    // Add performance degradation listener
-    const handlePerformanceDegradation = <span class="fstat-no" title="function not covered" >() =</span>&gt; {
-<span class="cstat-no" title="statement not covered" >      console.log('Performance degradation detected in ShoppingOptimizer');</span>
-      // Could trigger additional optimizations here
+    this.measureFrameRate();
+  }
+&nbsp;
+  // Stop monitoring frame rate
+  stopMonitoring(): void {
+    this.isMonitoring = false;
+    if (this.animationFrameId) {
+      cancelAnimationFrame(this.animationFrameId);
+      this.animationFrameId = null;
+    }
+  }
+&nbsp;
+  // Get current FPS
+<span class="fstat-no" title="function not covered" >  getCurrentFPS(</span>): number {
+<span class="cstat-no" title="statement not covered" >    return this.fps;</span>
+  }
+&nbsp;
+  // Get average FPS over the monitoring period
+<span class="fstat-no" title="function not covered" >  getAverageFPS(</span>): number {
+<span class="cstat-no" title="statement not covered" >    if (this.fpsHistory.length === 0) <span class="cstat-no" title="statement not covered" >return 60;</span></span>
+    
+    const sum = <span class="cstat-no" title="statement not covered" >this.fpsHistory.reduce(<span class="fstat-no" title="function not covered" >(a</span>cc, fps) =&gt; <span class="cstat-no" title="statement not covered" >acc + fps,</span> 0);</span>
+<span class="cstat-no" title="statement not covered" >    return sum / this.fpsHistory.length;</span>
+  }
+&nbsp;
+  // Get minimum FPS recorded
+<span class="fstat-no" title="function not covered" >  getMinimumFPS(</span>): number {
+<span class="cstat-no" title="statement not covered" >    if (this.fpsHistory.length === 0) <span class="cstat-no" title="statement not covered" >return 60;</span></span>
+<span class="cstat-no" title="statement not covered" >    return Math.min(...this.fpsHistory);</span>
+  }
+&nbsp;
+  // Check if performance is below threshold
+<span class="fstat-no" title="function not covered" >  isPerformancePoor(</span>): boolean {
+<span class="cstat-no" title="statement not covered" >    return this.getAverageFPS() &lt; this.performanceThreshold;</span>
+  }
+&nbsp;
+  // Add callback for FPS updates
+<span class="fstat-no" title="function not covered" >  onFPSUpdate(</span>callback: (fps: number) =&gt; void): void {
+<span class="cstat-no" title="statement not covered" >    this.callbacks.push(callback);</span>
+  }
+&nbsp;
+  // Remove callback
+<span class="fstat-no" title="function not covered" >  removeFPSCallback(</span>callback: (fps: number) =&gt; void): void {
+    const index = <span class="cstat-no" title="statement not covered" >this.callbacks.indexOf(callback);</span>
+<span class="cstat-no" title="statement not covered" >    if (index &gt; -1) {</span>
+<span class="cstat-no" title="statement not covered" >      this.callbacks.splice(index, 1);</span>
+    }
+  }
+&nbsp;
+  // Set performance threshold
+<span class="fstat-no" title="function not covered" >  setPerformanceThreshold(</span>threshold: number): void {
+<span class="cstat-no" title="statement not covered" >    this.performanceThreshold = threshold;</span>
+  }
+&nbsp;
+  // Get performance report
+<span class="fstat-no" title="function not covered" >  getPerformanceReport(</span>): {
+    current: number;
+    average: number;
+    minimum: number;
+    isPoor: boolean;
+    sampleCount: number;
+  } {
+<span class="cstat-no" title="statement not covered" >    return {</span>
+      current: this.fps,
+      average: this.getAverageFPS(),
+      minimum: this.getMinimumFPS(),
+      isPoor: this.isPerformancePoor(),
+      sampleCount: this.fpsHistory.length
     };
-    
-    window.addEventListener('performanceOptimizationEnabled', handlePerformanceDegradation);
-    
-    return () =&gt; {
-      frameRateMonitor.stopMonitoring();
-      animationOptimizer.stopOptimization();
-      window.removeEventListener('performanceOptimizationEnabled', handlePerformanceDegradation);
-    };
-  }, []);
+  }
 &nbsp;
-  // Log performance report on component unmount (development only)
-  useEffect(() =&gt; {
-    return () =&gt; {
-      <span class="missing-if-branch" title="if path not taken" >I</span>if (process.env.NODE_ENV === 'development') {
-<span class="cstat-no" title="statement not covered" >        performanceMonitor.logReport();</span>
-        
-        // Log performance budget summary
-        const summary = <span class="cstat-no" title="statement not covered" >performanceBudgetManager.getPerformanceSummary();</span>
-        const recommendations = <span class="cstat-no" title="statement not covered" >performanceChecker.getRecommendations();</span>
-        
-<span class="cstat-no" title="statement not covered" >        console.group('📊 Performance Budget Summary');</span>
-<span class="cstat-no" title="statement not covered" >        console.log('Total metrics:', summary.totalMetrics);</span>
-<span class="cstat-no" title="statement not covered" >        console.log('Budget violations:', summary.budgetViolations);</span>
-<span class="cstat-no" title="statement not covered" >        console.log('Warnings:', summary.warningCount);</span>
-<span class="cstat-no" title="statement not covered" >        console.log('Critical issues:', summary.criticalCount);</span>
-<span class="cstat-no" title="statement not covered" >        console.log('Recommendations:', recommendations);</span>
-<span class="cstat-no" title="statement not covered" >        console.groupEnd();</span>
+  private measureFrameRate = (): void =&gt; {
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (!this.isMonitoring) <span class="cstat-no" title="statement not covered" >return;</span>
+&nbsp;
+    const currentTime = performance.now();
+    this.frameCount++;
+&nbsp;
+    // Calculate FPS every second
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (currentTime &gt;= this.lastTime + 1000) {
+<span class="cstat-no" title="statement not covered" >      this.fps = Math.round((this.frameCount * 1000) / (currentTime - this.lastTime));</span>
+<span class="cstat-no" title="statement not covered" >      this.fpsHistory.push(this.fps);</span>
+      
+      // Keep only last 60 seconds of data
+<span class="cstat-no" title="statement not covered" >      if (this.fpsHistory.length &gt; 60) {</span>
+<span class="cstat-no" title="statement not covered" >        this.fpsHistory.shift();</span>
       }
-    };
-  }, [performanceMonitor]);
-&nbsp;
-  // Memoized input validation to avoid recalculating on every render
-  const inputValidation = useMemo(() =&gt; {
-    const trimmedInput = inputText.trim();
-    if (!trimmedInput) {
-      return { isValid: false, error: 'Please enter at least one shopping item to optimize.' };
-    }
-&nbsp;
-    // Check for meaningful input (not just whitespace or special characters)
-    const hasValidItems = trimmedInput.split(/[,\n]/).some(item =&gt; 
-      item.trim().length &gt; 0 &amp;&amp; /[a-zA-Z]/.test(item.trim())
-    );
-    
-    if (!hasValidItems) {
-      return { isValid: false, error: 'Please enter valid shopping items (items should contain letters).' };
-    }
-&nbsp;
-    return { isValid: true, error: '' };
-  }, [inputText]);
-&nbsp;
-  // Memoized optimization function to prevent unnecessary recalculations
-  const optimizeShoppingListMemo = useCallback((input: string) =&gt; {
-    const startTime = performance.now();
-    performanceMonitor.startTiming('optimization');
-    
-    const result = optimizeShoppingList(input);
-    
-    const duration = performanceMonitor.endTiming('optimization');
-    const totalDuration = performance.now() - startTime;
-    
-    // Record performance metrics
-    performanceBudgetManager.recordMetric('shopping-optimization', totalDuration);
-    
-    // Check performance budget
-    performanceBudget.checkBudget('optimization', duration);
-    
-    return result;
-  }, [performanceMonitor]);
-&nbsp;
-  const handleInputChange = useCallback((event: React.ChangeEvent&lt;HTMLTextAreaElement&gt;) =&gt; {
-    const startTime = performance.now();
-    
-    const value = event.target.value;
-    setInputText(value);
-    
-    // Clear error when user starts typing
-    <span class="missing-if-branch" title="if path not taken" >I</span>if (error) {
-<span class="cstat-no" title="statement not covered" >      setError('');</span>
-    }
-    
-    // Clear results when input is modified
-    <span class="missing-if-branch" title="if path not taken" >I</span>if (results) {
-<span class="cstat-no" title="statement not covered" >      setResults(null);</span>
-<span class="cstat-no" title="statement not covered" >      setShowResults(false);</span>
-<span class="cstat-no" title="statement not covered" >      setAnimateItems(false);</span>
-    }
-    
-    // Record input response time
-    const duration = performance.now() - startTime;
-    performanceBudgetManager.recordMetric('user-input-response', duration);
-  }, [error, results]);
-&nbsp;
-  const handleOptimize = useCallback(() =&gt; {
-    // Use memoized validation
-    <span class="missing-if-branch" title="if path not taken" >I</span>if (!inputValidation.isValid) {
-<span class="cstat-no" title="statement not covered" >      setError(inputValidation.error);</span>
-<span class="cstat-no" title="statement not covered" >      return;</span>
-    }
-&nbsp;
-    setIsProcessing(true);
-    setError('');
-    
-    try {
-      // Use requestAnimationFrame for better performance
-      requestAnimationFrame(() =&gt; {
-        // Use optimized timing based on device capabilities
-        const processingDelay = animationConfig.simplified ? <span class="branch-0 cbranch-no" title="branch not covered" >100 </span>: 200;
-        
-        setTimeout(() =&gt; {
-          const optimizationResult = optimizeShoppingListMemo(inputText.trim());
-          setResults(optimizationResult);
-          setIsProcessing(false);
-          
-          // Trigger entrance animations with optimized timing
-          if (animationConfig.enabled) {
-            requestAnimationFrame(() =&gt; {
-              setTimeout(() =&gt; setShowResults(true), 16); // One frame delay
-              setTimeout(() =&gt; setAnimateItems(true), animationConfig.duration * 0.67); // Reduced timing
-            });
-          } else <span class="missing-if-branch" title="else path not taken" >E</span>{
-            // Skip animations if disabled
-<span class="cstat-no" title="statement not covered" >            setShowResults(true);</span>
-<span class="cstat-no" title="statement not covered" >            setAnimateItems(true);</span>
-          }
-        }, processingDelay);
-      });
-    } catch {
-<span class="cstat-no" title="statement not covered" >      setError('An error occurred while processing your shopping list. Please try again.');</span>
-<span class="cstat-no" title="statement not covered" >      setIsProcessing(false);</span>
-    }
-  }, [inputValidation, inputText, optimizeShoppingListMemo]);
-&nbsp;
-  const handleKeyPress = useCallback(<span class="fstat-no" title="function not covered" >(e</span>vent: React.KeyboardEvent&lt;HTMLTextAreaElement&gt;) =&gt; {
-<span class="cstat-no" title="statement not covered" >    if (event.key === 'Enter' &amp;&amp; event.ctrlKey) {</span>
-<span class="cstat-no" title="statement not covered" >      event.preventDefault();</span>
-<span class="cstat-no" title="statement not covered" >      handleOptimize();</span>
-    }
-  }, [handleOptimize]);
-&nbsp;
-  return (
-    &lt;main className="shopping-optimizer" role="main"&gt;
-      &lt;header className="shopping-optimizer__header"&gt;
-        &lt;h1&gt;🛒 Shopping Optimizer&lt;/h1&gt;
-        &lt;p&gt;Enter your shopping list to get optimized recommendations for D-Mart vs Kirana stores&lt;/p&gt;
-      &lt;/header&gt;
       
-      &lt;section className="input-section" aria-labelledby="input-heading"&gt;
-        &lt;h2 id="input-heading" className="visually-hidden"&gt;Shopping List Input&lt;/h2&gt;
-        &lt;label htmlFor="shopping-input" className="visually-hidden"&gt;
-          Enter your shopping items, one per line or comma-separated
-        &lt;/label&gt;
-        &lt;textarea
-          id="shopping-input"
-          value={inputText}
-          onChange={handleInputChange}
-          onKeyPress={handleKeyPress}
-          placeholder="Enter your shopping list (one item per line or comma-separated)...&amp;#10;Example: milk, bread, oil 5L, sugar 3kg"
-          rows={6}
-          className={`shopping-input ${error ? <span class="branch-0 cbranch-no" title="branch not covered" >'error' </span>: ''}`}
-          disabled={isProcessing}
-          aria-describedby={error ? <span class="branch-0 cbranch-no" title="branch not covered" >'error-message' </span>: 'input-hint'}
-          aria-invalid={error ? <span class="branch-0 cbranch-no" title="branch not covered" >'true' </span>: 'false'}
-        /&gt;
-        
-        {error &amp;&amp; (
-<span class="branch-1 cbranch-no" title="branch not covered" >          &lt;div </span>
-            id="error-message" 
-            className="error-message" 
-            role="alert" 
-            aria-live="polite"
-          &gt;
-            &lt;span className="error-icon" aria-hidden="true"&gt;⚠️&lt;/span&gt;
-            {error}
-          &lt;/div&gt;
-        )}
-        
-        &lt;button 
-          onClick={handleOptimize}
-          className={`optimize-button ${isProcessing ? 'processing' : ''}`}
-          disabled={isProcessing || !inputValidation.isValid}
-          aria-describedby="input-hint"
-        &gt;
-          {isProcessing ? (
-            &lt;&gt;
-              &lt;span className="spinner" aria-hidden="true"&gt;&lt;/span&gt;
-              Processing...
-            &lt;/&gt;
-          ) : (
-            'Optimize Shopping List'
-          )}
-        &lt;/button&gt;
-        
-        &lt;p id="input-hint" className="input-hint"&gt;
-          💡 Tip: Press Ctrl+Enter to optimize quickly
-        &lt;/p&gt;
-      &lt;/section&gt;
+      // Notify callbacks
+<span class="cstat-no" title="statement not covered" >      this.callbacks.forEach(<span class="fstat-no" title="function not covered" >callback </span>=&gt; <span class="cstat-no" title="statement not covered" >callback(this.fps))</span>;</span>
       
-      {results &amp;&amp; (
-        &lt;section 
-          className={`results-section ${showResults ? <span class="branch-0 cbranch-no" title="branch not covered" >'results-section--visible' </span>: ''}`}
-          aria-labelledby="results-heading"
-          aria-live="polite"
-        &gt;
-          &lt;header className="summary-header"&gt;
-            &lt;h2 id="results-heading" className="visually-hidden"&gt;Shopping Optimization Results&lt;/h2&gt;
-            &lt;div className="summary-stats" role="region" aria-label="Summary statistics"&gt;
-              &lt;div className="stat-item"&gt;
-                &lt;div className="stat-number" aria-label={`${results.bulkItems.length} items for D-Mart`}&gt;
-                  {results.bulkItems.length}
-                &lt;/div&gt;
-                &lt;div className="stat-label"&gt;for D-Mart&lt;/div&gt;
-              &lt;/div&gt;
-              &lt;div className="stat-divider" aria-hidden="true"&gt;&lt;/div&gt;
-              &lt;div className="stat-item"&gt;
-                &lt;div className="stat-number" aria-label={`${results.dailyItems.length} items for Kirana`}&gt;
-                  {results.dailyItems.length}
-                &lt;/div&gt;
-                &lt;div className="stat-label"&gt;for Kirana&lt;/div&gt;
-              &lt;/div&gt;
-            &lt;/div&gt;
-          &lt;/header&gt;
-          
-          &lt;div className="results-cards" role="region" aria-label="Store recommendations"&gt;
-            &lt;article className="bulk-card" aria-labelledby="dmart-heading"&gt;
-              &lt;CardHeader 
-                storeType="dmart"
-                title="D-Mart (Bulk)"
-                icon="🛒"
-                benefitText="Save 15%"
-              /&gt;
-              {results.bulkItems.length &gt; 0 ? (
-                &lt;div 
-                  className={`items-list ${animateItems ? <span class="branch-0 cbranch-no" title="branch not covered" >'items-list--animated' </span>: ''}`}
-                  role="list"
-                  aria-label="Items recommended for D-Mart"
-                &gt;
-                  {results.bulkItems.map((item, index) =&gt; (
-                    &lt;div 
-                      key={index} 
-                      className="item-chip"
-                      role="listitem"
-                      style={{ 
-                        animationDelay: animateItems ? <span class="branch-0 cbranch-no" title="branch not covered" >`${index * 100}ms` </span>: '0ms' 
-                      }}
-                    &gt;
-                      {item.name}
-                    &lt;/div&gt;
-                  ))}
-                &lt;/div&gt;
-              ) : (
-                &lt;EmptyState storeType="dmart" /&gt;
-              )}
-            &lt;/article&gt;
+      // Log performance warnings in development
+<span class="cstat-no" title="statement not covered" >      if (process.env.NODE_ENV === 'development' &amp;&amp; this.fps &lt; this.performanceThreshold) {</span>
+<span class="cstat-no" title="statement not covered" >        console.warn(`⚠️ Low frame rate detected: ${this.fps} FPS (threshold: ${this.performanceThreshold} FPS)`);</span>
+      }
+      
+<span class="cstat-no" title="statement not covered" >      this.frameCount = 0;</span>
+<span class="cstat-no" title="statement not covered" >      this.lastTime = currentTime;</span>
+    }
+&nbsp;
+    this.animationFrameId = requestAnimationFrame(this.measureFrameRate);
+  };
+}
+&nbsp;
+// Performance degradation detector
+export class PerformanceDegradationDetector {
+  private frameRateMonitor: FrameRateMonitor;
+  private degradationCallbacks: (() =&gt; void)[] = [];
+  private improvementCallbacks: (() =&gt; void)[] = [];
+  private isDegraded = false;
+  private checkInterval: number | null = null;
+&nbsp;
+  constructor() {
+    this.frameRateMonitor = FrameRateMonitor.getInstance();
+  }
+&nbsp;
+  // Start monitoring for performance degradation
+  startMonitoring(): void {
+    this.frameRateMonitor.startMonitoring();
+    
+    // Check performance every 5 seconds
+    this.checkInterval = window.setInterval(<span class="fstat-no" title="function not covered" >() =</span>&gt; {
+<span class="cstat-no" title="statement not covered" >      this.checkPerformance();</span>
+    }, 5000);
+  }
+&nbsp;
+  // Stop monitoring
+  stopMonitoring(): void {
+    this.frameRateMonitor.stopMonitoring();
+    
+    <span class="missing-if-branch" title="else path not taken" >E</span>if (this.checkInterval) {
+      clearInterval(this.checkInterval);
+      this.checkInterval = null;
+    }
+  }
+&nbsp;
+  // Add callback for performance degradation
+  onDegradation(callback: () =&gt; void): void {
+    this.degradationCallbacks.push(callback);
+  }
+&nbsp;
+  // Add callback for performance improvement
+  onImprovement(callback: () =&gt; void): void {
+    this.improvementCallbacks.push(callback);
+  }
+&nbsp;
+  // Check if performance is currently degraded
+<span class="fstat-no" title="function not covered" >  isCurrentlyDegraded(</span>): boolean {
+<span class="cstat-no" title="statement not covered" >    return this.isDegraded;</span>
+  }
+&nbsp;
+  private <span class="fstat-no" title="function not covered" >checkPerformance(</span>): void {
+    const report = <span class="cstat-no" title="statement not covered" >this.frameRateMonitor.getPerformanceReport();</span>
+    const wasDegraded = <span class="cstat-no" title="statement not covered" >this.isDegraded;</span>
+    
+    // Consider performance degraded if average FPS is below 30 and we have enough samples
+<span class="cstat-no" title="statement not covered" >    this.isDegraded = report.isPoor &amp;&amp; report.sampleCount &gt;= 3;</span>
+    
+    // Trigger callbacks on state change
+<span class="cstat-no" title="statement not covered" >    if (!wasDegraded &amp;&amp; this.isDegraded) {</span>
+<span class="cstat-no" title="statement not covered" >      console.warn('🐌 Performance degradation detected, enabling optimizations');</span>
+<span class="cstat-no" title="statement not covered" >      this.degradationCallbacks.forEach(<span class="fstat-no" title="function not covered" >callback </span>=&gt; <span class="cstat-no" title="statement not covered" >callback())</span>;</span>
+    } else <span class="cstat-no" title="statement not covered" >if (wasDegraded &amp;&amp; !this.isDegraded) {</span>
+<span class="cstat-no" title="statement not covered" >      console.log('🚀 Performance improved, disabling optimizations');</span>
+<span class="cstat-no" title="statement not covered" >      this.improvementCallbacks.forEach(<span class="fstat-no" title="function not covered" >callback </span>=&gt; <span class="cstat-no" title="statement not covered" >callback())</span>;</span>
+    }
+  }
+}
+&nbsp;
+// Animation performance optimizer
+export class AnimationOptimizer {
+  private static instance: AnimationOptimizer;
+  private degradationDetector: PerformanceDegradationDetector;
+  private isOptimized = false;
+  private originalAnimationDurations = new Map&lt;string, string&gt;();
+&nbsp;
+  static getInstance(): AnimationOptimizer {
+    <span class="missing-if-branch" title="else path not taken" >E</span>if (!AnimationOptimizer.instance) {
+      AnimationOptimizer.instance = new AnimationOptimizer();
+    }
+    return AnimationOptimizer.instance;
+  }
+&nbsp;
+  constructor() {
+    this.degradationDetector = new PerformanceDegradationDetector();
+    
+    // Set up performance monitoring
+    this.degradationDetector.onDegradation(<span class="fstat-no" title="function not covered" >() =</span>&gt; {
+<span class="cstat-no" title="statement not covered" >      this.enableOptimizations();</span>
+    });
+    
+    this.degradationDetector.onImprovement(<span class="fstat-no" title="function not covered" >() =</span>&gt; {
+<span class="cstat-no" title="statement not covered" >      this.disableOptimizations();</span>
+    });
+  }
+&nbsp;
+  // Start monitoring and optimization
+  startOptimization(): void {
+    this.degradationDetector.startMonitoring();
+  }
+&nbsp;
+  // Stop monitoring and optimization
+  stopOptimization(): void {
+    this.degradationDetector.stopMonitoring();
+    this.disableOptimizations();
+  }
+&nbsp;
+  // Check if optimizations are currently enabled
+<span class="fstat-no" title="function not covered" >  isOptimizationEnabled(</span>): boolean {
+<span class="cstat-no" title="statement not covered" >    return this.isOptimized;</span>
+  }
+&nbsp;
+  private <span class="fstat-no" title="function not covered" >enableOptimizations(</span>): void {
+<span class="cstat-no" title="statement not covered" >    if (this.isOptimized) <span class="cstat-no" title="statement not covered" >return;</span></span>
+    
+<span class="cstat-no" title="statement not covered" >    this.isOptimized = true;</span>
+    
+    // Reduce animation durations
+<span class="cstat-no" title="statement not covered" >    this.optimizeAnimations();</span>
+    
+    // Add performance optimization class to body
+<span class="cstat-no" title="statement not covered" >    document.body.classList.add('performance-optimized');</span>
+    
+    // Dispatch custom event for components to react to
+<span class="cstat-no" title="statement not covered" >    window.dispatchEvent(new CustomEvent('performanceOptimizationEnabled'));</span>
+  }
+&nbsp;
+  private disableOptimizations(): void {
+    <span class="missing-if-branch" title="else path not taken" >E</span>if (!this.isOptimized) return;
+    
+<span class="cstat-no" title="statement not covered" >    this.isOptimized = false;</span>
+    
+    // Restore original animation durations
+<span class="cstat-no" title="statement not covered" >    this.restoreAnimations();</span>
+    
+    // Remove performance optimization class
+<span class="cstat-no" title="statement not covered" >    document.body.classList.remove('performance-optimized');</span>
+    
+    // Dispatch custom event
+<span class="cstat-no" title="statement not covered" >    window.dispatchEvent(new CustomEvent('performanceOptimizationDisabled'));</span>
+  }
+&nbsp;
+  private <span class="fstat-no" title="function not covered" >optimizeAnimations(</span>): void {
+    // Get all stylesheets
+    const stylesheets = <span class="cstat-no" title="statement not covered" >Array.from(document.styleSheets);</span>
+    
+<span class="cstat-no" title="statement not covered" >    stylesheets.forEach(<span class="fstat-no" title="function not covered" >stylesheet </span>=&gt; {</span>
+<span class="cstat-no" title="statement not covered" >      try {</span>
+        const rules = <span class="cstat-no" title="statement not covered" >Array.from(stylesheet.cssRules || []);</span>
+        
+<span class="cstat-no" title="statement not covered" >        rules.forEach(<span class="fstat-no" title="function not covered" >rule </span>=&gt; {</span>
+<span class="cstat-no" title="statement not covered" >          if (rule instanceof CSSStyleRule) {</span>
+            const style = <span class="cstat-no" title="statement not covered" >rule.style;</span>
             
-            &lt;article className="daily-card" aria-labelledby="kirana-heading"&gt;
-              &lt;CardHeader 
-                storeType="kirana"
-                title="Kirana (Daily)"
-                icon="🏪"
-                benefitText="Quick Access"
-              /&gt;
-              {results.dailyItems.length &gt; 0 ? (
-                &lt;div 
-                  className={`items-list ${animateItems ? <span class="branch-0 cbranch-no" title="branch not covered" >'items-list--animated' </span>: ''}`}
-                  role="list"
-                  aria-label="Items recommended for Kirana"
-                &gt;
-                  {results.dailyItems.map((item, index) =&gt; (
-                    &lt;div 
-                      key={index} 
-                      className="item-chip"
-                      role="listitem"
-                      style={{ 
-                        animationDelay: animateItems ? <span class="branch-0 cbranch-no" title="branch not covered" >`${index * 100}ms` </span>: '0ms' 
-                      }}
-                    &gt;
-                      {item.name}
-                    &lt;/div&gt;
-                  ))}
-                &lt;/div&gt;
-              ) : (
-                &lt;EmptyState storeType="kirana" /&gt;
-              )}
-            &lt;/article&gt;
-          &lt;/div&gt;
-          
-          &lt;footer className="results-footer"&gt;
-            &lt;div className="tip-box" role="complementary" aria-label="Shopping tips"&gt;
-              &lt;span className="tip-icon" aria-hidden="true"&gt;💡&lt;/span&gt;
-              &lt;span className="tip-text"&gt;
-                D-Mart: Better for bulk savings • Kirana: Quick &amp; convenient
-              &lt;/span&gt;
-            &lt;/div&gt;
-          &lt;/footer&gt;
-        &lt;/section&gt;
-      )}
-    &lt;/main&gt;
-  );
-};
+            // Optimize transition durations
+<span class="cstat-no" title="statement not covered" >            if (style.transitionDuration) {</span>
+<span class="cstat-no" title="statement not covered" >              if (!this.originalAnimationDurations.has(rule.selectorText)) {</span>
+<span class="cstat-no" title="statement not covered" >                this.originalAnimationDurations.set(rule.selectorText, style.transitionDuration);</span>
+              }
+              
+              // Reduce duration by 50%
+              const duration = <span class="cstat-no" title="statement not covered" >parseFloat(style.transitionDuration);</span>
+<span class="cstat-no" title="statement not covered" >              if (!isNaN(duration)) {</span>
+<span class="cstat-no" title="statement not covered" >                style.transitionDuration = `${duration * 0.5}s`;</span>
+              }
+            }
+            
+            // Optimize animation durations
+<span class="cstat-no" title="statement not covered" >            if (style.animationDuration) {</span>
+<span class="cstat-no" title="statement not covered" >              if (!this.originalAnimationDurations.has(rule.selectorText + '-animation')) {</span>
+<span class="cstat-no" title="statement not covered" >                this.originalAnimationDurations.set(rule.selectorText + '-animation', style.animationDuration);</span>
+              }
+              
+              // Reduce duration by 50%
+              const duration = <span class="cstat-no" title="statement not covered" >parseFloat(style.animationDuration);</span>
+<span class="cstat-no" title="statement not covered" >              if (!isNaN(duration)) {</span>
+<span class="cstat-no" title="statement not covered" >                style.animationDuration = `${duration * 0.5}s`;</span>
+              }
+            }
+          }
+        });
+      } catch (e) {
+        // Ignore cross-origin stylesheet errors
+      }
+    });
+  }
 &nbsp;
-export default ShoppingOptimizer;</pre></td></tr></table></pre>
+  private <span class="fstat-no" title="function not covered" >restoreAnimations(</span>): void {
+    // Restore original animation durations
+    const stylesheets = <span class="cstat-no" title="statement not covered" >Array.from(document.styleSheets);</span>
+    
+<span class="cstat-no" title="statement not covered" >    stylesheets.forEach(<span class="fstat-no" title="function not covered" >stylesheet </span>=&gt; {</span>
+<span class="cstat-no" title="statement not covered" >      try {</span>
+        const rules = <span class="cstat-no" title="statement not covered" >Array.from(stylesheet.cssRules || []);</span>
+        
+<span class="cstat-no" title="statement not covered" >        rules.forEach(<span class="fstat-no" title="function not covered" >rule </span>=&gt; {</span>
+<span class="cstat-no" title="statement not covered" >          if (rule instanceof CSSStyleRule) {</span>
+            const style = <span class="cstat-no" title="statement not covered" >rule.style;</span>
+            
+            // Restore transition duration
+            const originalTransition = <span class="cstat-no" title="statement not covered" >this.originalAnimationDurations.get(rule.selectorText);</span>
+<span class="cstat-no" title="statement not covered" >            if (originalTransition) {</span>
+<span class="cstat-no" title="statement not covered" >              style.transitionDuration = originalTransition;</span>
+            }
+            
+            // Restore animation duration
+            const originalAnimation = <span class="cstat-no" title="statement not covered" >this.originalAnimationDurations.get(rule.selectorText + '-animation');</span>
+<span class="cstat-no" title="statement not covered" >            if (originalAnimation) {</span>
+<span class="cstat-no" title="statement not covered" >              style.animationDuration = originalAnimation;</span>
+            }
+          }
+        });
+      } catch (e) {
+        // Ignore cross-origin stylesheet errors
+      }
+    });
+    
+<span class="cstat-no" title="statement not covered" >    this.originalAnimationDurations.clear();</span>
+  }
+}
+&nbsp;
+// Global instances
+export const frameRateMonitor = FrameRateMonitor.getInstance();
+export const animationOptimizer = AnimationOptimizer.getInstance();</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
             </div><!-- /wrapper -->
